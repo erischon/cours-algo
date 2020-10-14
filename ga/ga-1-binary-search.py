@@ -5,20 +5,17 @@ def binary_search(list, item):
     high = len(list) - 1
 
     while low <= high: 
-        mid = (low + high) / 2
-        print("Mid", mid)
+        mid = (low + high)
         guess = list[int(mid)]
-        print("Guess", guess)
 
         if guess == item:
-            return mid        
+            # print("Guess: ", mid)
+            return mid    
         if guess > item:
             high = mid - 1
-            print("High", high)
         else:
             low = mid + 1
-            print("Low", low)
-        return None
+    return None
 
 
 my_list = [1, 3, 5, 7, 9]
